@@ -684,6 +684,7 @@ ul {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .projeckt-item:hover {
