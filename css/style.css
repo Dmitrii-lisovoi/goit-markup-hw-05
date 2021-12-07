@@ -118,6 +118,10 @@ ul {
   color: var(--second-tittle-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .header-contacts {
@@ -129,6 +133,9 @@ ul {
   color: var(--first-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .header-mail {
@@ -154,6 +161,16 @@ ul {
 
 .current {
   color: var(--accent-color);
+}
+.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
 }
 
 /* ---------------------------------------------стилизация героя----------------------------------- */
@@ -371,6 +388,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
@@ -423,6 +441,7 @@ ul {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -537,6 +556,7 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--adress-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-tel {
@@ -545,6 +565,7 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--adress-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-base {
@@ -591,6 +612,7 @@ ul {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
@@ -650,6 +672,8 @@ ul {
   cursor: pointer;
   padding: 6px 22px 6px 22px;
   white-space: nowrap;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-btn:active {
@@ -685,6 +709,31 @@ ul {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projeckt-wraper {
+  position: relative;
+  overflow: hidden;
+}
+
+.projeckt-wraper-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  font-style: roboto;
+  font-size: 18px;
+  line-height: 1.56;
+  padding: 63px 24px;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projeckt-item:hover .projeckt-wraper-text {
+  transform: translateY(0%);
 }
 
 .projeckt-item:hover {
@@ -705,6 +754,10 @@ ul {
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
+}
+
+.projeck-link {
+  text-decoration: none;
 }
 
 .projeckt-title {
